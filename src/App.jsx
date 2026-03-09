@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { createScene } from "./three/scene.js";
 import { createGiftBox } from "./three/giftBox.js";
 import { buildTextMesh } from "./three/textMesh.js";
+import { addCelestial, updateCelestial } from "./three/celestial.js";
 import ConfigPanel from "./ConfigPanel.jsx";
 import "./App.css";
 
@@ -33,6 +34,9 @@ function App() {
       boxColor,
       lidColor,
     );
+
+    const celestial = addCelestial(scene);
+    const startTime = performance.now();
     boxMatRef.current = boxMat;
     lidMatRef.current = lidMat;
 
@@ -166,6 +170,8 @@ function App() {
     let animId;
     const animate = () => {
       animId = requestAnimationFrame(animate);
+      const elapsedSeconds = (performance.now() - startTime) / 1000;
+      updateCelestial(celestial, elapsedSeconds);
       controls.update();
       renderer.render(scene, camera);
     };

@@ -10,9 +10,9 @@ export function createScene(mount) {
     55,
     mount.clientWidth / mount.clientHeight,
     0.1,
-    100,
+    200,
   );
-  camera.position.set(3, 2.9, 6);
+  camera.position.set(3, 2.9, 8);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(mount.clientWidth, mount.clientHeight);
