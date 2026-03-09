@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
+}
+
+.config-panel {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(10, 10, 20, 0.82);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  color: #e0e0f0;
+  font-family: system-ui, sans-serif;
+  font-size: 0.82rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 200px;
+  user-select: none;
+}
+
+.config-panel h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #a0c8ff;
+}
+
+.config-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: #99aabb;
+}
+
+.config-panel .row {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.config-panel input:not([type='color']) {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  color: #e0e0f0;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.82rem;
+  flex: 1;
+  outline: none;
+}
+
+.config-panel input:not([type='color']):focus {
+  border-color: rgba(79, 195, 247, 0.5);
+}
+
+.config-panel input[type='color'] {
+  width: 100%;
+  height: 28px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+}
+
+.config-panel button {
+  background: rgba(79, 195, 247, 0.12);
+  border: 1px solid rgba(79, 195, 247, 0.3);
+  border-radius: 5px;
+  color: #4fc3f7;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.config-panel button:hover {
+  background: rgba(79, 195, 247, 0.28);
+}
