@@ -12,7 +12,7 @@ export function createScene(mount) {
     0.1,
     100,
   );
-  camera.position.set(3.5, 3, 5);
+  camera.position.set(3, 2.9, 6);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(mount.clientWidth, mount.clientHeight);

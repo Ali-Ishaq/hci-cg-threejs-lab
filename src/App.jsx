@@ -20,7 +20,7 @@ function App() {
   const [boxColor, setBoxColor] = useState("#4fc3f7");
   const [lidColor, setLidColor] = useState("#ff4757");
   const [textColor, setTextColor] = useState("#ffd700");
-  const [draftText, setDraftText] = useState("Greetings");
+  const [draftText, setDraftText] = useState("EID MUBARAK !");
 
   // One-time scene setup
   useEffect(() => {
