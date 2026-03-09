@@ -5,7 +5,6 @@ export function createGiftBox(scene, boxColor, lidColor) {
     color: boxColor,
     metalness: 0.15,
     roughness: 0.55,
-    side: THREE.DoubleSide, // inner walls visible when lid is open
   });
   const lidMat = new THREE.MeshStandardMaterial({
     color: lidColor,
